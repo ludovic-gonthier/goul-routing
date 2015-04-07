@@ -1,0 +1,37 @@
+{
+    "name": "goul/goul-routing",
+    "description": "Application to build website or handle back command",
+    "keywords": ["hhvm", "hacklang", "hack"],
+    "authors": [
+        {
+            "name": "Ludovic Gonthier",
+            "email": "gonthier.ludovic@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url" : "/home/ludovic-gonthier/git-bare/goul-exception.git"
+        },
+        {
+            "type": "vcs",
+            "url" : "/home/ludovic-gonthier/git-bare/goul-traits.git"
+        }
+    ],
+    "require-dev" : {
+        "phpunit/phpunit": "dev-master",
+        "phpunit/php-code-coverage": "~2.0"
+    },
+    "require" : {
+        "goul/goul-exception": "dev-master",
+        "goul/goul-traits": "dev-bootstrap"
+    },
+    "scripts": {
+        "phpunit": "hhvm -v Eval.Jit=false vendor/bin/phpunit"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Goul\\" : "Goul"
+        }
+    }
+}
